@@ -1,2 +1,1 @@
-# eric-live-business-finder
-Live Michigan business prospect finder for Google review NFC sales
+# Eric's Live Business Finder\n\nLive business discovery with optional Google Places ratings mode.\n
