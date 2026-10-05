@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<title>Leave a Review</title>
+<style>
+:root{--bg:#090d18;--panel:#111827;--accent:#9b91ff;--accent2:#88efac;--text:#f8f9ff;--muted:#a4aec6;--line:#2a3349}
+*{box-sizing:border-box}body{margin:0;min-height:100svh;background:radial-gradient(circle at 50% 0,#202348 0,#0b1020 42%,#080b13 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:grid;place-items:center;padding:22px}
+.card{width:min(100%,520px);background:rgba(17,24,39,.94);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 28px 80px #0008;text-align:center}
+.logo{width:84px;height:84px;border-radius:24px;background:linear-gradient(145deg,var(--accent),var(--accent2));display:grid;place-items:center;margin:0 auto 20px;font-size:31px;font-weight:900;color:#101321;box-shadow:0 13px 30px #0005}
+.kicker{font-size:11px;letter-spacing:.18em;color:#aaa5ef;font-weight:800;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(30px,8vw,46px);line-height:1.02;letter-spacing:-.045em;margin:0 0 16px}
+.sub{color:var(--muted);font-size:16px;line-height:1.65;margin:0 auto 25px;max-width:390px}
+.notice{background:#171f31;border:1px solid #2b3651;border-radius:15px;padding:14px 15px;text-align:left;color:#c1c9dd;font-size:13px;line-height:1.55;margin-bottom:18px}
+.notice strong{color:white}
+.review{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:58px;border:0;border-radius:15px;background:linear-gradient(135deg,var(--accent),#7468f8);color:white;text-decoration:none;font-weight:900;font-size:17px;box-shadow:0 12px 30px #7668ff30}
+.review[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
+.later{display:inline-block;margin-top:17px;color:#99a5bf;text-decoration:none;font-size:14px}
+.powered{margin-top:29px;border-top:1px solid var(--line);padding-top:17px;color:#77849f;font-size:11px;letter-spacing:.04em}
+.powered b{color:#aeb8d1}
+.demo{margin-bottom:16px;display:inline-block;background:#3a3020;color:#ffd990;border:1px solid #5d4a28;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;letter-spacing:.08em}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="demo">DEMO PAGE</div>
+  <div class="logo">DB</div>
+  <div class="kicker">THANK YOU FOR VISITING</div>
+  <h1>Demo Business</h1>
+  <p class="sub">Your honest feedback helps this local business improve and helps future customers know what to expect.</p>
+  <div class="notice"><strong>No review gating.</strong> Every customer gets the same option to leave an honest Google review — positive, neutral, or negative.</div>
+  <a class="review" id="reviewBtn" href="#" aria-disabled="true">★ Leave a Google Review</a>
+  <a class="later" href="javascript:history.length>1?history.back():void(0)">Maybe later</a>
+  <div class="powered">Powered by <b>Eric Review Tap</b></div>
+</main>
+<script>
+document.getElementById('reviewBtn').addEventListener('click',function(e){
+  if(this.getAttribute('aria-disabled')==='true'){
+    e.preventDefault();
+    alert("Demo mode: connect the customer's real Google review link to activate this button.");
+  }
+});
+</script>
+</body>
+</html>
